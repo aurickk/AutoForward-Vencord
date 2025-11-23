@@ -60,7 +60,7 @@ Make sure you have the AutoForward plugin enabled and set up correctly.
 
 ## Settings
 
-### Private Channel ID
+### Middleman Channel ID
 The channel where messages are temporarily sent before forwarding.
 ### Enable Console Logs
 Toggle debug logging to console for troubleshooting.
