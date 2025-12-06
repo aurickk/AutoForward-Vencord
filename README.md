@@ -27,7 +27,7 @@ pnpm install --frozen-lockfile
 ```
 3. Navigate to the `src` folder in the cloned Vencord repository and create a new folder called `userplugins` if it dosen't already exist.
 
-3. Download `autoForwad.tsx` from the latest [release](https://github.com/aurickk/AutoForward-Vencord/releases) and move it to the `userplugins` folder.
+3. Download `autoForward.tsx` from the latest [release](https://github.com/aurickk/AutoForward-Vencord/releases) and move it to the `userplugins` folder.
 
 4. Build Vencord and inject Discord:
 
