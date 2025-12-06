@@ -14,19 +14,20 @@ Useful to hide deleted messages from bot message loggers, as deleted forwarded m
 4. The result: your message appears as a forwarded message in the target channel.
 
 ## Installation
+
 1. Install [Node.js](https://nodejs.org/en), [git](https://git-scm.com/install/), and [pnpm](https://pnpm.io/installation) if missing.
 
-2. Run:
-
+2. Clone Vencord's Github repository:
 ```sh
 git clone https://github.com/Vendicated/Vencord
 cd Vencord
 pnpm install --frozen-lockfile
 ```
 
-3. Create a folder called `autoForward` in `/Vencord/src/plugins`.
+3. Create a folder called `autoForward` in `[Where-You-Cloned-Your-Vencord-Repository]/Vencord/src/plugins`.
 
-4. Download and move the AutoForward `index.tsx` into the newly created `autoForward` folder.
+
+4. Download `index.tsx` from the latest [release](https://github.com/aurickk/AutoForward-Vencord/releases) and move it into the newly created `autoForward` folder.
 
 5. Run:
 ```sh
@@ -35,6 +36,7 @@ pnpm inject
 ```
 6. If built and injected successfully, follow the remaining prompt(s) and restart Discord to apply changes.
 7. In Discord's Vencord plugins menu, enable the AutoForward Plugin.
+
 
 ## Setup
 
