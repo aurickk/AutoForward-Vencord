@@ -9,11 +9,13 @@ Useful to hide deleted messages from bot message loggers, as deleted forwarded m
 ## How It Works
 
 1. When you send a message, the plugin intercepts it before it reaches the original channel.
-2. The message is sent to your configured predefined channel.
+2. The intercepted message is redirected to your configured predefined channel.
 3. After the message loads into your predefined channel, the message is forwarded from said channel to the intended destination.
 4. The result: your message appears as a forwarded message in the target channel.
 
 ## Installation
+
+Because this is not an official Vencord plugin, you must build Vencord with the plugin from source before install Vencord.
 
 1. Install [Node.js](https://nodejs.org/en), [git](https://git-scm.com/install/), and [pnpm](https://pnpm.io/installation) if missing.
 
@@ -23,19 +25,20 @@ git clone https://github.com/Vendicated/Vencord
 cd Vencord
 pnpm install --frozen-lockfile
 ```
+3. Navigate to the `src` folder in the cloned Vencord repository and create a new folder called `userplugins` if it dosen't already exist.
 
-3. Create a folder called `autoForward` in `[Where-You-Cloned-Your-Vencord-Repository]/Vencord/src/plugins`.
+3. Download `autoForwad.tsx` from the latest [release](https://github.com/aurickk/AutoForward-Vencord/releases) and move it to the `userplugins` folder.
 
+4. Build Vencord and inject Discord:
 
-4. Download `index.tsx` from the latest [release](https://github.com/aurickk/AutoForward-Vencord/releases) and move it into the newly created `autoForward` folder.
-
-5. Run:
 ```sh
 pnpm build
 pnpm inject
 ```
-6. If built and injected successfully, follow the remaining prompt(s) and restart Discord to apply changes.
-7. In Discord's Vencord plugins menu, enable the AutoForward Plugin.
+5. If built and injected successfully, follow the remaining prompt(s) and restart Discord to apply changes.
+6. In Discord's Vencord plugins menu, enable the AutoForwad Plugin.
+
+[Offical Vencord custom plugin installation documentation](https://docs.vencord.dev/installing/custom-plugins/)
 
 
 ## Setup
@@ -78,3 +81,4 @@ Toggle debug logging to console for troubleshooting.
 
 - Messages sent in the private channel itself are not forwarded (to prevent infinite loops).
 - If you send messages too fast before your previous autoforward message is processed, they will won't get autoforwarded.
+- There is a noticible latency when using auto forward because the message/file needs to be loaded and processed in the middleman channel before it is forwarded to the destination.
